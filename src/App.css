@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.heading{
+  padding-left: 3%;
+  padding-top: 5%;
+}
+.heading h1{
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: sans-serif;
+}
+.heading p{
+  font-size: 20px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff; /* Background color for navbar */
+  border-bottom: 1px solid #ddd; /* Border for separation */
+}
+
+.navbar .logo img {
+  max-width: 100px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between menu items */
+}
+
+.nav-links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  /* width: 100%; */
+}
+
+.dropdown-menu a {
+  color: #333;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none; /* Remove underline */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Sidebar Menu */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially hidden off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0; /* Show the sidebar when open */
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #333;
+}
+
+.close-btn {
+  font-size: 30px;
+  cursor: pointer;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url('background.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 89vh;
+  display: flex;
+  align-items: flex-end; /* Aligns content to the bottom */
+  justify-content: flex-start; /* Aligns content to the left */
+  color: white;
+  padding: 51px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero-content button {
+  padding: 15px 88px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.hero-content button:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .head h1 {
+    font-size: 20px !important; /* Smaller font size for mobile */
+  }
+
+  .head p {
+    font-size: 15px !important; /* Smaller font size for mobile */
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero-section {
+    height: 50vh;
+  }
+
+  .hero-content h1 {
+    font-size: 24px; /* Smaller text size for mobile */
+  }
+
+  .hero-content p {
+    font-size: 14px; /* Smaller text size for mobile */
+  }
+
+  .hero-content button {
+    padding: 10px 40px; /* Smaller button padding for mobile */
+    font-size: 16px; /* Smaller button text size */
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  position: relative;
+}
+
+.image-section {
+  flex-grow: 1;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.image-section select {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  outline: none;
+}
+
+.next-button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.next-button img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  border: 2px solid #333;
+  object-fit: cover;
+}
+
+.next-button span {
+  background: #333;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+.head{
+  padding-left: 3%;
+  padding-top: 5%;
+}
+.head h1{
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: sans-serif;
+}
+.head p{
+  font-size: 25px;
+  padding-bottom: 5%;
+}
